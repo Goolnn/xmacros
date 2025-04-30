@@ -6,6 +6,7 @@
 #include "xmacros/priv/suffix.h"
 #include "xmacros/priv/prefix.h"
 #include "xmacros/priv/concat.h"
+#include "xmacros/priv/paren.h"
 #include "xmacros/priv/join.h"
 #include "xmacros/priv/argc.h"
 #include "xmacros/priv/argn.h"
@@ -26,5 +27,7 @@
 #define xmacros_suffix_combine(pre, ...) priv_suffix_combine(pre, __VA_ARGS__)
 #define xmacros_suffix_concat(pre, ...) priv_suffix_concat(pre, __VA_ARGS__)
 #define xmacros_suffix_join(pre, sep, ...) priv_suffix_join(pre, sep, __VA_ARGS__)
+
+#define xmacros_is_paren(x) priv_is_paren(x)
 
 #endif
