@@ -1,11 +1,10 @@
 #ifndef GOOLNN_XMACROS_XMACROS_H
 #define GOOLNN_XMACROS_XMACROS_H
 
-#include "xmacros/priv/utils/reverse.h"
-#include "xmacros/priv/utils/pop.h"
 #include "xmacros/priv/overload.h"
 #include "xmacros/priv/is_empty.h"
 #include "xmacros/priv/is_paren.h"
+#include "xmacros/priv/reverse.h"
 #include "xmacros/priv/combine.h"
 #include "xmacros/priv/suffix.h"
 #include "xmacros/priv/prefix.h"
@@ -13,6 +12,7 @@
 #include "xmacros/priv/join.h"
 #include "xmacros/priv/argc.h"
 #include "xmacros/priv/argn.h"
+#include "xmacros/priv/pop.h"
 
 #define xmacros_argc(...) priv_argc(__VA_ARGS__)
 #define xmacros_argn(n, ...) priv_argn(n, __VA_ARGS__)
