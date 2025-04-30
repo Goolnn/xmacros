@@ -7,4 +7,6 @@
 #define xmacros_argc(...) priv_argc(__VA_ARGS__)
 #define xmacros_argn(n, ...) priv_argn(n, __VA_ARGS__)
 
+#define xmacros_combine(...) priv_combine(__VA_ARGS__)
+
 #endif
