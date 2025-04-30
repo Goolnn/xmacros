@@ -1,6 +1,8 @@
 #ifndef GOOLNN_XMACROS_PRIV_UTILS_POP_H
 #define GOOLNN_XMACROS_PRIV_UTILS_POP_H
 
+#include "xmacros/priv/overload.h"
+
 #define priv_pop_0(...) __VA_ARGS__
 #define priv_pop_1(v, ...) priv_pop_0(__VA_ARGS__)
 #define priv_pop_2(v, ...) priv_pop_1(__VA_ARGS__)
@@ -66,6 +68,6 @@
 #define priv_pop_62(v, ...) priv_pop_61(__VA_ARGS__)
 #define priv_pop_63(v, ...) priv_pop_62(__VA_ARGS__)
 
-#define priv_pop(n, ...) priv_pop ## _ ## n(__VA_ARGS__)
+#define priv_pop(n, ...) priv_overload(priv_pop, n)(__VA_ARGS__)
 
 #endif
