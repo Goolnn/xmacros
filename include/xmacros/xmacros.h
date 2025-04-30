@@ -1,0 +1,4 @@
+#ifndef GOOLNN_XMACROS_XMACROS_H
+#define GOOLNN_XMACROS_XMACROS_H
+
+#endif
