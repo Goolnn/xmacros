@@ -1,6 +1,8 @@
 #ifndef GOOLNN_XMACROS_XMACROS_H
 #define GOOLNN_XMACROS_XMACROS_H
 
+#include "xmacros/priv/utils/reverse.h"
+#include "xmacros/priv/utils/pop.h"
 #include "xmacros/priv/overload.h"
 #include "xmacros/priv/is_empty.h"
 #include "xmacros/priv/is_paren.h"
@@ -33,6 +35,8 @@
 #define xmacros_is_empty(...) priv_is_empty(__VA_ARGS__)
 
 #define xmacros_reverse(...) priv_reverse(__VA_ARGS__)
-#define xmacros_pop
+
+#define xmacros_pop_front(...) priv_pop_front(__VA_ARGS__)
+#define xmacros_pop_back(...) priv_pop_back(__VA_ARGS__)
 
 #endif
