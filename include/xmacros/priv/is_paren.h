@@ -3,11 +3,8 @@
 
 #include "xmacros/priv/argn.h"
 
-#define priv_probe() ~, 1
+#define priv_probe(...) ~, 1
 
-#define priv_is_probe(...) priv_argn(1, __VA_ARGS__, 0)
-#define priv_is_paren_probe(...) priv_probe()
-
-#define priv_is_paren(x) priv_is_probe(priv_is_paren_probe x)
+#define priv_is_paren(x) priv_argn(1, priv_probe x, 0)
 
 #endif
