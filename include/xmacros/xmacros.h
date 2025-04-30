@@ -2,11 +2,12 @@
 #define GOOLNN_XMACROS_XMACROS_H
 
 #include "xmacros/priv/overload.h"
+#include "xmacros/priv/is_empty.h"
+#include "xmacros/priv/is_paren.h"
 #include "xmacros/priv/combine.h"
 #include "xmacros/priv/suffix.h"
 #include "xmacros/priv/prefix.h"
 #include "xmacros/priv/concat.h"
-#include "xmacros/priv/paren.h"
 #include "xmacros/priv/join.h"
 #include "xmacros/priv/argc.h"
 #include "xmacros/priv/argn.h"
@@ -29,5 +30,6 @@
 #define xmacros_suffix_join(pre, sep, ...) priv_suffix_join(pre, sep, __VA_ARGS__)
 
 #define xmacros_is_paren(x) priv_is_paren(x)
+#define xmacros_is_empty(...) priv_is_empty(__VA_ARGS__)
 
 #endif
