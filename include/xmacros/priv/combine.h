@@ -1,7 +1,7 @@
 #ifndef GOOLNN_XMACROS_PRIV_COMBINE_H
 #define GOOLNN_XMACROS_PRIV_COMBINE_H
 
-#include "xmacros/priv/argc.h"
+#include "xmacros/priv/overload.h"
 
 #define priv_apply_combine(a, b) a ## _ ## b
 
@@ -70,6 +70,6 @@
 #define priv_combine_62(v, ...) priv_combine_2(v, priv_combine_61(__VA_ARGS__))
 #define priv_combine_63(v, ...) priv_combine_2(v, priv_combine_62(__VA_ARGS__))
 
-#define priv_combine(...) priv_combine_2(priv_combine, priv_argc(__VA_ARGS__))(__VA_ARGS__)
+#define priv_combine(...) priv_overload(priv_combine, priv_argc(__VA_ARGS__))(__VA_ARGS__)
 
 #endif
