@@ -1,6 +1,7 @@
 #ifndef GOOLNN_XMACROS_PRIV_UTILS_POP_H
 #define GOOLNN_XMACROS_PRIV_UTILS_POP_H
 
+#include "xmacros/priv/utils/reverse.h"
 #include "xmacros/priv/overload.h"
 
 #define priv_pop_front_0(...) __VA_ARGS__
@@ -69,5 +70,6 @@
 #define priv_pop_front_63(v, ...) priv_pop_front_62(__VA_ARGS__)
 
 #define priv_pop_front(n, ...) priv_overload(priv_pop_front, n)(__VA_ARGS__)
+#define priv_pop_back(n, ...) priv_reverse(priv_pop_front(n, priv_reverse(__VA_ARGS__)))
 
 #endif
