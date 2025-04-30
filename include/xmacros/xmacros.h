@@ -3,6 +3,7 @@
 
 #include "xmacros/priv/overload.h"
 #include "xmacros/priv/combine.h"
+#include "xmacros/priv/prefix.h"
 #include "xmacros/priv/concat.h"
 #include "xmacros/priv/join.h"
 #include "xmacros/priv/argc.h"
@@ -16,5 +17,9 @@
 #define xmacros_join(...) priv_join(__VA_ARGS__)
 
 #define xmacros_overload(p, q) priv_overload(p, q)
+
+#define xmacros_prefix_combine(pre, ...) priv_prefix_combine(pre, __VA_ARGS__)
+#define xmacros_prefix_concat(pre, ...) priv_prefix_concat(pre, __VA_ARGS__)
+#define xmacros_prefix_join(pre, sep, ...) priv_prefix_join(pre, sep, __VA_ARGS__)
 
 #endif
