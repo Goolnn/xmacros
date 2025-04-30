@@ -32,4 +32,7 @@
 #define xmacros_is_paren(x) priv_is_paren(x)
 #define xmacros_is_empty(...) priv_is_empty(__VA_ARGS__)
 
+#define xmacros_reverse(...) priv_reverse(__VA_ARGS__)
+#define xmacros_pop
+
 #endif
