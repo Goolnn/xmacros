@@ -1,10 +1,12 @@
 #ifndef GOOLNN_XMACROS_PRIV_UTILS_H
 #define GOOLNN_XMACROS_PRIV_UTILS_H
 
-#define priv_wrap(...) (__VA_ARGS__)
-#define priv_unwrap(...) __VA_ARGS__
+#include "xmacros/priv/reverse.h"
 
-#define first(v, ...) v
-#define last(...) priv_unwrap(first priv_wrap(priv_reverse(__VA_ARGS__)))
+#define priv_pack(...) (__VA_ARGS__)
+#define priv_unpack(...) __VA_ARGS__
+
+#define priv_first(v, ...) v
+#define priv_last(...) priv_unpack(priv_first priv_pack(priv_reverse(__VA_ARGS__)))
 
 #endif

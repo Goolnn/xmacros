@@ -9,10 +9,12 @@
 #include "xmacros/priv/suffix.h"
 #include "xmacros/priv/prefix.h"
 #include "xmacros/priv/concat.h"
+#include "xmacros/priv/unwrap.h"
 #include "xmacros/priv/utils.h"
 #include "xmacros/priv/join.h"
 #include "xmacros/priv/argc.h"
 #include "xmacros/priv/argn.h"
+#include "xmacros/priv/wrap.h"
 #include "xmacros/priv/pop.h"
 
 #define xmacros_argc(...) priv_argc(__VA_ARGS__)
@@ -42,5 +44,11 @@
 
 #define xmacros_wrap(...) priv_wrap(__VA_ARGS__)
 #define xmacros_unwrap(...) priv_unwrap(__VA_ARGS__)
+
+#define xmacros_pack(...) priv_pack(__VA_ARGS__)
+#define xmacros_unpack(...) priv_unpack(__VA_ARGS__)
+
+#define xmacros_first(...) priv_first(__VA_ARGS__)
+#define xmacros_last(...) priv_last(__VA_ARGS__)
 
 #endif
