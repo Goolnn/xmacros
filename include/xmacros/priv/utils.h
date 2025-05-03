@@ -3,8 +3,10 @@
 
 #include "xmacros/priv/reverse.h"
 
+#define priv_apply_unpack(...) __VA_ARGS__
+
 #define priv_pack(...) (__VA_ARGS__)
-#define priv_unpack(...) __VA_ARGS__
+#define priv_unpack(...) priv_apply_unpack __VA_ARGS__
 
 #define priv_expand(...) __VA_ARGS__
 
