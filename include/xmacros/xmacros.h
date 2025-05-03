@@ -10,6 +10,7 @@
 #include "xmacros/priv/prefix.h"
 #include "xmacros/priv/concat.h"
 #include "xmacros/priv/unwrap.h"
+#include "xmacros/priv/insert.h"
 #include "xmacros/priv/utils.h"
 #include "xmacros/priv/join.h"
 #include "xmacros/priv/argc.h"
@@ -50,6 +51,8 @@
 #define xmacros_sub_front(n, ...) priv_sub_front(n, __VA_ARGS__)
 #define xmacros_sub_back(n, ...) priv_sub_back(n, __VA_ARGS__)
 #define xmacros_sub(i, j, ...) priv_sub(i, j, __VA_ARGS__)
+
+#define xmacros_insert(i, v, ...) priv_insert(i, v, __VA_ARGS__)
 
 #define xmacros_wrap(...) priv_wrap(__VA_ARGS__)
 #define xmacros_unwrap(...) priv_unwrap(__VA_ARGS__)
