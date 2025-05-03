@@ -46,7 +46,9 @@
 #define xmacros_unwrap(...) priv_unwrap(__VA_ARGS__)
 
 #define xmacros_pack(...) priv_pack(__VA_ARGS__)
-#define xmacros_unpack(...) priv_unpack(__VA_ARGS__)
+#define xmacros_unpack(...) priv_unpack __VA_ARGS__
+
+#define xmacros_expand(...) priv_expand(__VA_ARGS__)
 
 #define xmacros_first(...) priv_first(__VA_ARGS__)
 #define xmacros_last(...) priv_last(__VA_ARGS__)
