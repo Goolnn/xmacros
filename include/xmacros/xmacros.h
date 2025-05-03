@@ -1,6 +1,7 @@
 #ifndef GOOLNN_XMACROS_XMACROS_H
 #define GOOLNN_XMACROS_XMACROS_H
 
+#include "xmacros/priv/to_string.h"
 #include "xmacros/priv/overload.h"
 #include "xmacros/priv/is_empty.h"
 #include "xmacros/priv/is_paren.h"
@@ -58,6 +59,8 @@
 
 #define xmacros_wrap(...) priv_wrap(__VA_ARGS__)
 #define xmacros_unwrap(...) priv_unwrap(__VA_ARGS__)
+
+#define xmacros_to_string(v) priv_to_string(v)
 
 #define xmacros_pack(...) priv_pack(__VA_ARGS__)
 #define xmacros_unpack(...) priv_unpack(__VA_ARGS__)
