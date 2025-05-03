@@ -6,8 +6,8 @@
 #include "xmacros/priv/argc.h"
 #include "xmacros/priv/pop.h"
 
-#define priv_sub_front_0()
-#define priv_sub_front_1(v) v
+#define priv_sub_front_0(...)
+#define priv_sub_front_1(v, ...) v
 #define priv_sub_front_2(v, ...) v, priv_sub_front_1(__VA_ARGS__)
 #define priv_sub_front_3(v, ...) v, priv_sub_front_2(__VA_ARGS__)
 #define priv_sub_front_4(v, ...) v, priv_sub_front_3(__VA_ARGS__)
