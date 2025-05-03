@@ -39,8 +39,8 @@
 
 #define xmacros_reverse(...) priv_reverse(__VA_ARGS__)
 
-#define xmacros_pop_front(...) priv_pop_front(__VA_ARGS__)
-#define xmacros_pop_back(...) priv_pop_back(__VA_ARGS__)
+#define xmacros_pop_front(n, ...) priv_pop_front(n, __VA_ARGS__)
+#define xmacros_pop_back(n, ...) priv_pop_back(n, __VA_ARGS__)
 
 #define xmacros_wrap(...) priv_wrap(__VA_ARGS__)
 #define xmacros_unwrap(...) priv_unwrap(__VA_ARGS__)
