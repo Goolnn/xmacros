@@ -11,6 +11,7 @@
 #include "xmacros/priv/concat.h"
 #include "xmacros/priv/unwrap.h"
 #include "xmacros/priv/insert.h"
+#include "xmacros/priv/space.h"
 #include "xmacros/priv/utils.h"
 #include "xmacros/priv/join.h"
 #include "xmacros/priv/argc.h"
@@ -25,6 +26,7 @@
 
 #define xmacros_combine(...) priv_combine(__VA_ARGS__)
 #define xmacros_concat(...) priv_concat(__VA_ARGS__)
+#define xmacros_space(...) priv_space(__VA_ARGS__)
 #define xmacros_join(...) priv_join(__VA_ARGS__)
 
 #define xmacros_overload(p, q) priv_overload(p, q)
