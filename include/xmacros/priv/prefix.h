@@ -6,8 +6,8 @@
 #include "xmacros/priv/concat.h"
 #include "xmacros/priv/join.h"
 
-#define priv_prefix_combine_0(pre)
-#define priv_prefix_combine_1(pre, v) priv_combine_2(pre, v)
+#define priv_prefix_combine_0(pre, ...)
+#define priv_prefix_combine_1(pre, v, ...) priv_combine_2(pre, v)
 #define priv_prefix_combine_2(pre, v, ...) priv_combine_2(pre, v), priv_prefix_combine_1(pre, __VA_ARGS__)
 #define priv_prefix_combine_3(pre, v, ...) priv_combine_2(pre, v), priv_prefix_combine_2(pre, __VA_ARGS__)
 #define priv_prefix_combine_4(pre, v, ...) priv_combine_2(pre, v), priv_prefix_combine_3(pre, __VA_ARGS__)
@@ -71,8 +71,8 @@
 #define priv_prefix_combine_62(pre, v, ...) priv_combine_2(pre, v), priv_prefix_combine_61(pre, __VA_ARGS__)
 #define priv_prefix_combine_63(pre, v, ...) priv_combine_2(pre, v), priv_prefix_combine_62(pre, __VA_ARGS__)
 
-#define priv_prefix_concat_0(pre)
-#define priv_prefix_concat_1(pre, v) priv_concat_2(pre, v)
+#define priv_prefix_concat_0(pre, ...)
+#define priv_prefix_concat_1(pre, v, ...) priv_concat_2(pre, v)
 #define priv_prefix_concat_2(pre, v, ...) priv_concat_2(pre, v), priv_prefix_concat_1(pre, __VA_ARGS__)
 #define priv_prefix_concat_3(pre, v, ...) priv_concat_2(pre, v), priv_prefix_concat_2(pre, __VA_ARGS__)
 #define priv_prefix_concat_4(pre, v, ...) priv_concat_2(pre, v), priv_prefix_concat_3(pre, __VA_ARGS__)
@@ -136,8 +136,8 @@
 #define priv_prefix_concat_62(pre, v, ...) priv_concat_2(pre, v), priv_prefix_concat_61(pre, __VA_ARGS__)
 #define priv_prefix_concat_63(pre, v, ...) priv_concat_2(pre, v), priv_prefix_concat_62(pre, __VA_ARGS__)
 
-#define priv_prefix_join_0(pre, sep)
-#define priv_prefix_join_1(pre, sep, v) priv_join_2(sep, pre, v)
+#define priv_prefix_join_0(pre, sep, ...)
+#define priv_prefix_join_1(pre, sep, v, ...) priv_join_2(sep, pre, v)
 #define priv_prefix_join_2(pre, sep, v, ...) priv_join_2(sep, pre, v), priv_prefix_join_1(pre, sep, __VA_ARGS__)
 #define priv_prefix_join_3(pre, sep, v, ...) priv_join_2(sep, pre, v), priv_prefix_join_2(pre, sep, __VA_ARGS__)
 #define priv_prefix_join_4(pre, sep, v, ...) priv_join_2(sep, pre, v), priv_prefix_join_3(pre, sep, __VA_ARGS__)
