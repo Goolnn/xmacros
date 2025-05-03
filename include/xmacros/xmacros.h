@@ -17,6 +17,7 @@
 #include "xmacros/priv/wrap.h"
 #include "xmacros/priv/push.h"
 #include "xmacros/priv/pop.h"
+#include "xmacros/priv/sub.h"
 
 #define xmacros_argc(...) priv_argc(__VA_ARGS__)
 #define xmacros_argn(n, ...) priv_argn(n, __VA_ARGS__)
@@ -45,6 +46,10 @@
 
 #define xmacros_push_front(args, ...) priv_push_front(args, __VA_ARGS__)
 #define xmacros_push_back(args, ...) priv_push_back(args, __VA_ARGS__)
+
+#define xmacros_sub_front(n, ...) priv_sub_front(n, __VA_ARGS__)
+#define xmacros_sub_back(n, ...) priv_sub_back(n, __VA_ARGS__)
+#define xmacros_sub(i, j, ...) priv_sub(i, j, __VA_ARGS__)
 
 #define xmacros_wrap(...) priv_wrap(__VA_ARGS__)
 #define xmacros_unwrap(...) priv_unwrap(__VA_ARGS__)
