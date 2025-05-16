@@ -37,11 +37,13 @@
 #define xmacros_prefix_concat(pre, ...) priv_prefix_concat(pre, __VA_ARGS__)
 #define xmacros_prefix_space(pre, ...) priv_prefix_space(pre, __VA_ARGS__)
 #define xmacros_prefix_join(pre, sep, ...) priv_prefix_join(pre, sep, __VA_ARGS__)
+#define xmacros_prefix_comma(pre, ...) priv_prefix_comma(pre, __VA_ARGS__)
 
 #define xmacros_suffix_combine(pre, ...) priv_suffix_combine(pre, __VA_ARGS__)
 #define xmacros_suffix_concat(pre, ...) priv_suffix_concat(pre, __VA_ARGS__)
 #define xmacros_suffix_space(pre, ...) priv_suffix_space(pre, __VA_ARGS__)
 #define xmacros_suffix_join(pre, sep, ...) priv_suffix_join(pre, sep, __VA_ARGS__)
+#define xmacros_suffix_comma(pre, ...) priv_suffix_comma(pre, __VA_ARGS__)
 
 #define xmacros_is_paren(x) priv_is_paren(x)
 #define xmacros_is_empty(...) priv_is_empty(__VA_ARGS__)
